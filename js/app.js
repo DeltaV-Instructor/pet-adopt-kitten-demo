@@ -78,25 +78,32 @@ Pet.prototype.render = function(){
   ///////////
   //create table for pets
   let petTable = document.getElementById('adoptPets-table');
-  let petRow = document.createElement('tr');
-  let nameCell = document.createElement('td');
-  nameCell.textContent = this.petName;
-  petRow.appendChild(nameCell);
+  let headRow = document.createElement('tr');
+ 
+  let headNameCell = document.createElement('th');
+  headNameCell.textContent = this.petName;
+  headRow.appendChild(headNameCell);
+  
+  console.log({petTable, headNameCell, headRow});
 
-  let breedCell = document.createElement('td');
-  breedCell.textContent = this.breed;
-  petRow.appendChild(breedCell);
+  // let nameCell = document.createElement('td');
+  // nameCell.textContent = this.petName;
+  // petRow.appendChild(nameCell);
 
-  let ageCell = document.createElement('td');
-  ageCell.textContent = this.age;
-  petRow.appendChild(ageCell);
+  // let breedCell = document.createElement('td');
+  // breedCell.textContent = this.breed;
+  // petRow.appendChild(breedCell);
 
-  let interestsCell = document.createElement('td');
-  interestsCell.textContent = this.interests;
-  petRow.appendChild(interestsCell);
-  petTable.appendChild(petRow);
+  // let ageCell = document.createElement('td');
+  // ageCell.textContent = this.age;
+  // petRow.appendChild(ageCell);
 
-};
+  // let interestsCell = document.createElement('td');
+  // interestsCell.textContent = this.interests;
+  // petRow.appendChild(interestsCell);
+  petTable.appendChild(headRow);
+
+};//closes the render function.
 
 
 let allPets = [petOne, petTwo, petThree];
