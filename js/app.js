@@ -79,11 +79,11 @@ Pet.prototype.render = function(){
   //create table for pets
   let petTable = document.getElementById('adoptPets-table');
   let headRow = document.createElement('tr');
- 
+
   let headNameCell = document.createElement('th');
   headNameCell.textContent = this.petName;
   headRow.appendChild(headNameCell);
-  
+
   console.log({petTable, headNameCell, headRow});
 
   // let nameCell = document.createElement('td');
@@ -115,8 +115,7 @@ for(let i = 0; i < allPets.length; i++){
 }
 
 
-
-
+document.getElementById('addBodyStyle').style.textAlign = 'center';
 
 
 
